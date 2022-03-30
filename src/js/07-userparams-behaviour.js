@@ -77,13 +77,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function applyPattern (str, key, value) {
-    console.log('applyPattern', str, key, value)
+    // console.log('applyPattern', str, key, value)
     //(%25key%25|%key%) %25 is urlencode value of %
     var pattern = '(' + '%25' + key + '%25' +
       '|' + '%' + key + '%' + ')'
     var re = new RegExp(pattern, 'gi')
-    if (!re.test(str)) console.error('NO VALIDO', str, pattern)
-    else console.log('VALIDO', str, pattern)
+    // if (!re.test(str)) console.error('NO VALIDO', str, pattern)
+    // else console.log('VALIDO', str, pattern)
     return str.replace(re, value)
   }
 
